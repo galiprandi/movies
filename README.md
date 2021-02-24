@@ -2,8 +2,8 @@
 
 ## Svelte version:
 
-- URL: https://galiprandi.github.io/movies/svelte/public/
+- URL: [Try Online](https://galiprandi.github.io/movies/svelte/public/)
 
-- Bundle size: 6kb
+- Bundle size: 6,4kb
 
-- Bundle compile time: 737ms with Rollup
+- Bundle compile time: 761ms with Rollup
