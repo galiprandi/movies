@@ -1,4 +1,6 @@
 <script>
+  import { log } from "node:console"
+
   /**
      * API Key V3: 38d2b879e4e32254577f8d6411c67af4
      * Token V4: eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIzOGQyYjg3OWU0ZTMyMjU0NTc3ZjhkNjQxMWM2N2FmNCIsInN1YiI6IjYwMzY2MTZkZWVjNWI1MDAzZjFhZWQ0YiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.hH17tMt65B4QkE0thazM9mHNEAgNi--1dJhWP4DmvDw
@@ -44,6 +46,7 @@
     movies = await fetch(url)
       .then((response) => response.json())
       .then((data) => data.results || [])
+    console.log(movies)
   }
 
   const inputLoaded = (input) => {
@@ -74,7 +77,7 @@
             />
           {/if}
         </picture>
-        <section class="information">
+        <section class="summary">
           <h1>{title} ({new Date(date).getFullYear()})</h1>
           <details>
             <summary>Summary</summary>
@@ -97,15 +100,11 @@
   }
   input,
   button {
-    line-height: 1.3em;
-    padding: 0.5em;
-    border-color: white;
+    font-size: 1em;
     text-transform: capitalize;
   }
   button:hover {
     cursor: pointer;
-    border-color: initial;
-    background-color: white;
     color: tomato;
   }
   main {
@@ -115,21 +114,45 @@
     padding: 1em;
   }
   form {
+    display: flex;
+    justify-content: space-between;
     position: sticky;
     top: 0;
     background-color: inherit;
     width: 100%;
+    max-width: 500px;
     padding: 1em 0;
+    margin: auto;
   }
+
+  form input {
+    flex-grow: 2;
+    margin-right: 2em;
+  }
+
+  main section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
   article {
-    margin-bottom: 5em;
     display: flex;
     flex-direction: column;
+    max-width: 500px;
+    background-color: white;
+    margin: 3em auto;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 1px 1px 5px 1px #1b1b1b;
   }
+
   article img {
-    max-width: 80%;
+    max-width: 100%;
   }
   article section {
+    display: flex;
+    flex-direction: column;
     background-color: white;
     color: initial;
     font-size: 1.3em;
