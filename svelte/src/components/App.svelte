@@ -99,7 +99,6 @@
   button {
     line-height: 1.3em;
     padding: 0.5em;
-    font-size: 1.3em;
     border-color: white;
     text-transform: capitalize;
   }
