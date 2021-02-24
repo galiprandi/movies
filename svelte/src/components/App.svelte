@@ -1,6 +1,4 @@
 <script>
-  import { log } from "node:console"
-
   /**
      * API Key V3: 38d2b879e4e32254577f8d6411c67af4
      * Token V4: eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIzOGQyYjg3OWU0ZTMyMjU0NTc3ZjhkNjQxMWM2N2FmNCIsInN1YiI6IjYwMzY2MTZkZWVjNWI1MDAzZjFhZWQ0YiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.hH17tMt65B4QkE0thazM9mHNEAgNi--1dJhWP4DmvDw
@@ -43,9 +41,18 @@
     const API_KEY = `38d2b879e4e32254577f8d6411c67af4`
     const url = `https://api.themoviedb.org/3/search/movie?api_key=38d2b879e4e32254577f8d6411c67af4&query=${query}`
     console.info(`Searching: ${query}`)
+
+    const orderResults = (a, b) =>
+      a.release_date < b.release_date
+        ? 1
+        : b.release_date < a.release_date
+        ? -1
+        : 0
+
     movies = await fetch(url)
       .then((response) => response.json())
-      .then((data) => data.results || [])
+      .then((data) => data.results.sort(orderResults) || [])
+
     console.log(movies)
   }
 
@@ -75,6 +82,12 @@
               alt={title}
               {title}
             />
+          {:else}
+            <img
+              src="https://via.placeholder.com/500x750?text=POSTER%20UNAVAILABLE"
+              alt={title}
+              {title}
+            />
           {/if}
         </picture>
         <section class="summary">
@@ -85,10 +98,9 @@
           </details>
         </section>
       </article>
-    {:else}
-      <h1>No search result</h1>
     {/each}
   </section>
+  <p>Power by themoviedb.org</p>
 </main>
 
 <style>
@@ -98,26 +110,34 @@
     color: white;
     font-family: system-ui, Ubuntu, sans-serif;
   }
+
   input,
   button {
-    font-size: 1em;
-    text-transform: capitalize;
+    border-radius: 5px;
+    padding: 0 1em;
+    font-size: 110%;
+  }
+  input {
+    width: 100%;
+  }
+  button {
+    cursor: pointer;
   }
   button:hover {
-    cursor: pointer;
     color: tomato;
   }
   main {
     text-align: center;
     background-color: #252525;
     min-height: 100vh;
-    padding: 1em;
+    padding: 0 1em;
   }
   form {
     display: flex;
     justify-content: space-between;
     position: sticky;
     top: 0;
+    height: 2em;
     background-color: inherit;
     width: 100%;
     max-width: 500px;
@@ -141,7 +161,7 @@
     flex-direction: column;
     max-width: 500px;
     background-color: white;
-    margin: 3em auto;
+    margin: 0.5em auto 5em auto;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 1px 1px 5px 1px #1b1b1b;
@@ -157,9 +177,7 @@
     color: initial;
     font-size: 1.3em;
     margin: auto;
-    width: 80%;
-    padding: 1em;
-    box-sizing: border-box;
+    padding: 0.5em;
   }
   article h1 {
     margin: 0;
@@ -167,5 +185,8 @@
   article details {
     color: #292929;
     margin-top: 1em;
+  }
+  article details > * {
+    font-size: 14px;
   }
 </style>
