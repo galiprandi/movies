@@ -3,7 +3,7 @@ import MovieCard from "./MovieCard"
 import "./App.css"
 
 export default function App() {
-  const [query, setQuery] = useState("Matrix")
+  const [query, setQuery] = useState("")
   const [movies, setMovies] = useState([])
 
   async function queryMovies(querySearch) {
