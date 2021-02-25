@@ -36,6 +36,7 @@
 <main>
   <form on:submit|preventDefault={() => queryMovies(query)}>
     <input
+      id="querySearch"
       type="search"
       name="querySearch"
       bind:value={query}
