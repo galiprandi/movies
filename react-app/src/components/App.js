@@ -1,10 +1,16 @@
-import React, { useState } from "react"
+import React, { useState, useRef, useEffect } from "react"
 import MovieCard from "./MovieCard"
 import "./App.css"
 
 export default function App() {
   const [query, setQuery] = useState("")
   const [movies, setMovies] = useState([])
+
+  const querySearchInput = useRef(null)
+  useEffect(() => {
+    console.log(querySearchInput)
+    querySearchInput.current.focus()
+  }, [])
 
   async function queryMovies(querySearch) {
     if (querySearch.length < 2) return
@@ -37,7 +43,15 @@ export default function App() {
             queryMovies(query)
           }}
         >
-          <input value={query} onChange={(e) => setQuery(e.target.value)} />
+          <input
+            id="querySearch"
+            name="querySearch"
+            placeholder="Search movies..."
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+            onFocus={(e) => console.log(e.target.select())}
+            ref={querySearchInput}
+          />
           <button type="submit">Search</button>
         </form>
         <section>
