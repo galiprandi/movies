@@ -12,7 +12,7 @@ function MovieCard(props) {
         <picture>
           <img src={srcImage} alt={title} />
         </picture>
-        <section class="summary">
+        <section className="summary">
           <h1>
             {title} ({new Date(date).getFullYear()})
           </h1>
