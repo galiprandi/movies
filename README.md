@@ -8,7 +8,7 @@ Movies App if is a little app with unique the object of analyze the difference b
 
 - Javascript Bundle size: 3,3kb
 
-- Lighthouse Score: 95%
+- Lighthouse Performance: 95%
 
 ## React version:
 
@@ -16,4 +16,4 @@ Movies App if is a little app with unique the object of analyze the difference b
 
 - Javascript Bundle size: 862kb
 
-- Lighthouse Score: 78%
+- Lighthouse Performance: 73%
