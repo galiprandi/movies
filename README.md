@@ -4,12 +4,16 @@ Movies App if is a little app with unique the object of analyze the difference b
 
 ## Svelte version:
 
-- URL: [Try Online](https://galiprandi.github.io/movies/svelte-app/public/)
+> URL: [Try Online](https://galiprandi.github.io/movies/svelte-app/public/)
 
-- Bundle size: 7,2kb
+- Javascript Bundle size: 3,3kb
+
+- Lighthouse Score: 95%
 
 ## React version:
 
-- URL: [Try Online](https://galiprandi.github.io/movies/react-app/build/)
+> URL: [Try Online](https://galiprandi.github.io/movies/react-app/build/)
 
-- Bundle size: 143kb
+- Javascript Bundle size: 495kb
+
+- Lighthouse Score: 78%
