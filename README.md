@@ -14,6 +14,6 @@ Movies App if is a little app with unique the object of analyze the difference b
 
 > URL: [Try Online](https://galiprandi.github.io/movies/react-app/build/)
 
-- Javascript Bundle size: 495kb
+- Javascript Bundle size: 862kb
 
 - Lighthouse Score: 78%
