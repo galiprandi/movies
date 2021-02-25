@@ -4,7 +4,7 @@ Movies App if is a little app with unique the object of analyze the difference b
 
 ## Svelte version:
 
-- URL: [Try Online](https://galiprandi.github.io/movies/svelte/public/)
+- URL: [Try Online](https://galiprandi.github.io/movies/svelte-app/public/)
 
 - Bundle size: 7,2kb (no minify, with CSS)
 
