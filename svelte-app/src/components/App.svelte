@@ -58,6 +58,7 @@
     margin: 0;
     min-height: 100vh;
     color: white;
+    background-color: #252525;
     font-family: system-ui, Ubuntu, sans-serif;
   }
 
@@ -78,7 +79,6 @@
   }
   main {
     text-align: center;
-    background-color: #252525;
     min-height: 100vh;
     padding: 0 1.5em;
   }
