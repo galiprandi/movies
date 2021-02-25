@@ -7,10 +7,7 @@ export default function App() {
   const [movies, setMovies] = useState([])
 
   const querySearchInput = useRef(null)
-  useEffect(() => {
-    console.log(querySearchInput)
-    querySearchInput.current.focus()
-  }, [])
+  useEffect(() => querySearchInput.current.focus(), [])
 
   async function queryMovies(querySearch) {
     if (querySearch.length < 2) return
@@ -56,7 +53,7 @@ export default function App() {
         </form>
         <section>
           {movies.map((movie) => {
-            return <MovieCard Movie={movie} />
+            return <MovieCard key={movie.id} Movie={movie} />
           })}
         </section>
         <p>Power by themoviedb.org</p>
