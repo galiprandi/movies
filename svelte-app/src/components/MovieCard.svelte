@@ -1,13 +1,7 @@
 <script>
   export let movie
 
-  const {
-    title,
-    poster_path: src,
-    overview,
-    release_date: date,
-    vote_average: votes,
-  } = movie
+  const { title, poster_path: src, overview, release_date: date } = movie
 </script>
 
 <article>
@@ -50,7 +44,7 @@
   article img {
     max-width: 100%;
   }
-  article section {
+  article > section {
     display: flex;
     flex-direction: column;
     background-color: white;

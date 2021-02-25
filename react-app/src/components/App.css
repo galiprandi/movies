@@ -1,0 +1,86 @@
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: white;
+  background-color: #252525;
+  font-family: system-ui, Ubuntu, sans-serif;
+}
+
+input,
+button {
+  border-radius: 5px;
+  padding: 0 1em;
+  font-size: 110%;
+}
+input {
+  width: 100%;
+}
+button {
+  cursor: pointer;
+}
+button:hover {
+  color: tomato;
+}
+main {
+  text-align: center;
+  min-height: 100vh;
+  padding: 0 1.5em;
+}
+form {
+  display: flex;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  height: 2em;
+  background-color: inherit;
+  width: 100%;
+  max-width: 500px;
+  padding: 1em 0;
+  margin: auto;
+}
+
+form input {
+  flex-grow: 2;
+  margin-right: 2em;
+}
+
+main > section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  min-height: calc(100vh - 120px);
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  background-color: white;
+  margin: 0.5em auto 5em auto;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 1px 1px 5px 1px #1b1b1b;
+}
+
+article img {
+  max-width: 100%;
+}
+article section {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  color: initial;
+  font-size: 1.3em;
+  margin: auto;
+  padding: 0.5em;
+}
+article h1 {
+  margin: 0;
+}
+article details {
+  color: #292929;
+  margin-top: 1em;
+}
+article details > * {
+  font-size: 14px;
+}
