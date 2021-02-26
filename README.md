@@ -6,10 +6,10 @@ Movies App if is a little app with unique the object of analyze the difference b
 
 > URL: [Try Online](https://galiprandi.github.io/movies/svelte-app/public/)
 
-- Javascript Bundle size: 3,43kb
+- Svelte Bundle size: 8,0K
 
 ## React version:
 
 > URL: [Try Online](https://galiprandi.github.io/movies/react-app/build/)
 
-- Javascript Bundle size: 449kb
+- React Bundle size: 144K
