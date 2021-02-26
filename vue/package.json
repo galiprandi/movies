@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "build": "vue-cli-service build; npm run update-readme-bundle-sizes",
     "update-readme-bundle-sizes": "cd ..;sh ./update-readme-bundle-sizes.sh"
   },
   "dependencies": {
