@@ -58,7 +58,9 @@ article {
 article > picture > img {
   width: 100%;
 }
-
+details summary {
+  cursor: pointer;
+}
 section.summary {
   padding: 1em;
 }
