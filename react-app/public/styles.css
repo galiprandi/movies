@@ -16,6 +16,10 @@ body > main {
   padding: 1em;
 }
 
+main > section {
+  padding: 1em;
+}
+
 main > form {
   position: sticky;
   top: 1em;
@@ -57,4 +61,8 @@ article > picture > img {
 
 section.summary {
   padding: 1em;
+}
+
+section.summary h1 {
+  font-size: 1.3em;
 }
