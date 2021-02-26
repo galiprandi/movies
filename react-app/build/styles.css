@@ -12,28 +12,24 @@ body {
   margin: 0;
 }
 
-body > main {
-  padding: 1em;
-}
-
-main > section {
-  padding: 1em;
-}
-
 main > form {
   position: sticky;
   top: 1em;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-width: 500px;
+  padding-bottom: 1em;
 }
-form * {
+form > * {
   height: 35px;
-  font-size: 110%;
   box-shadow: 0 0 6px 0px #252525;
   text-transform: capitalize;
-  padding: 0 1em;
 }
 
 form input {
-  margin-right: 2em;
+  min-width: 50%;
 }
 
 main > section {
@@ -46,7 +42,7 @@ main > section {
 article {
   background-color: #fff;
   color: #252525;
-  margin: 1em auto 5em auto;
+  margin: 1em auto 3em auto;
   border-radius: 10px;
   overflow: hidden;
   width: 500px;
