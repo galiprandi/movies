@@ -686,18 +686,18 @@ var app = (function () {
 
     function get_each_context(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[7] = list[i];
+    	child_ctx[6] = list[i];
     	return child_ctx;
     }
 
-    // (50:4) {#each movies as movie (movie.id)}
+    // (46:4) {#each movies as movie (movie.id)}
     function create_each_block(key_1, ctx) {
     	let first;
     	let moviecard;
     	let current;
 
     	moviecard = new MovieCard({
-    			props: { movie: /*movie*/ ctx[7] },
+    			props: { movie: /*movie*/ ctx[6] },
     			$$inline: true
     		});
 
@@ -717,7 +717,7 @@ var app = (function () {
     		p: function update(new_ctx, dirty) {
     			ctx = new_ctx;
     			const moviecard_changes = {};
-    			if (dirty & /*movies*/ 2) moviecard_changes.movie = /*movie*/ ctx[7];
+    			if (dirty & /*movies*/ 2) moviecard_changes.movie = /*movie*/ ctx[6];
     			moviecard.$set(moviecard_changes);
     		},
     		i: function intro(local) {
@@ -739,7 +739,7 @@ var app = (function () {
     		block,
     		id: create_each_block.name,
     		type: "each",
-    		source: "(50:4) {#each movies as movie (movie.id)}",
+    		source: "(46:4) {#each movies as movie (movie.id)}",
     		ctx
     	});
 
@@ -763,7 +763,7 @@ var app = (function () {
     	let dispose;
     	let each_value = /*movies*/ ctx[1];
     	validate_each_argument(each_value);
-    	const get_key = ctx => /*movie*/ ctx[7].id;
+    	const get_key = ctx => /*movie*/ ctx[6].id;
     	validate_each_keys(ctx, each_value, get_each_context, get_key);
 
     	for (let i = 0; i < each_value.length; i += 1) {
@@ -794,13 +794,13 @@ var app = (function () {
     			attr_dev(input, "type", "search");
     			attr_dev(input, "name", "querySearch");
     			attr_dev(input, "placeholder", "Search movies...");
-    			add_location(input, file$1, 37, 4, 902);
+    			add_location(input, file$1, 33, 4, 815);
     			attr_dev(button, "type", "submit");
-    			add_location(button, file$1, 46, 4, 1116);
-    			add_location(form, file$1, 36, 2, 839);
-    			add_location(section, file$1, 48, 2, 1166);
-    			add_location(p, file$1, 53, 2, 1270);
-    			add_location(main, file$1, 35, 0, 830);
+    			add_location(button, file$1, 42, 4, 1029);
+    			add_location(form, file$1, 32, 2, 752);
+    			add_location(section, file$1, 44, 2, 1079);
+    			add_location(p, file$1, 49, 2, 1183);
+    			add_location(main, file$1, 31, 0, 743);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -825,10 +825,10 @@ var app = (function () {
 
     			if (!mounted) {
     				dispose = [
-    					listen_dev(input, "input", /*input_input_handler*/ ctx[5]),
+    					listen_dev(input, "input", /*input_input_handler*/ ctx[4]),
     					action_destroyer(/*inputLoaded*/ ctx[3].call(null, input)),
     					listen_dev(input, "focus", focus_handler, false, false, false),
-    					listen_dev(form, "submit", prevent_default(/*submit_handler*/ ctx[6]), false, true, false)
+    					listen_dev(form, "submit", prevent_default(/*submit_handler*/ ctx[5]), false, true, false)
     				];
 
     				mounted = true;
@@ -892,8 +892,7 @@ var app = (function () {
     function instance$1($$self, $$props, $$invalidate) {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots("App", slots, []);
-    	let { initialQuery } = $$props;
-    	let query = initialQuery;
+    	let query;
     	let movies = [];
 
     	async function queryMovies(querySearch) {
@@ -914,7 +913,7 @@ var app = (function () {
     		input.focus();
     	};
 
-    	const writable_props = ["initialQuery"];
+    	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console.warn(`<App> was created with unknown prop '${key}'`);
@@ -927,14 +926,8 @@ var app = (function () {
 
     	const submit_handler = () => queryMovies(query);
 
-    	$$self.$$set = $$props => {
-    		if ("initialQuery" in $$props) $$invalidate(4, initialQuery = $$props.initialQuery);
-    	};
-
     	$$self.$capture_state = () => ({
-    		element,
     		MovieCard,
-    		initialQuery,
     		query,
     		movies,
     		queryMovies,
@@ -942,7 +935,6 @@ var app = (function () {
     	});
 
     	$$self.$inject_state = $$props => {
-    		if ("initialQuery" in $$props) $$invalidate(4, initialQuery = $$props.initialQuery);
     		if ("query" in $$props) $$invalidate(0, query = $$props.query);
     		if ("movies" in $$props) $$invalidate(1, movies = $$props.movies);
     	};
@@ -951,21 +943,13 @@ var app = (function () {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [
-    		query,
-    		movies,
-    		queryMovies,
-    		inputLoaded,
-    		initialQuery,
-    		input_input_handler,
-    		submit_handler
-    	];
+    	return [query, movies, queryMovies, inputLoaded, input_input_handler, submit_handler];
     }
 
     class App extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$1, create_fragment$1, safe_not_equal, { initialQuery: 4 });
+    		init(this, options, instance$1, create_fragment$1, safe_not_equal, {});
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
@@ -973,29 +957,11 @@ var app = (function () {
     			options,
     			id: create_fragment$1.name
     		});
-
-    		const { ctx } = this.$$;
-    		const props = options.props || {};
-
-    		if (/*initialQuery*/ ctx[4] === undefined && !("initialQuery" in props)) {
-    			console.warn("<App> was created without expected prop 'initialQuery'");
-    		}
-    	}
-
-    	get initialQuery() {
-    		throw new Error("<App>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	set initialQuery(value) {
-    		throw new Error("<App>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
     }
 
     const app = new App({
       target: document.body,
-      props: {
-        initialQuery: "",
-      },
     });
 
     return app;

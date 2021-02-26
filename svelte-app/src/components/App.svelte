@@ -1,11 +1,7 @@
 <script>
-  import { element } from "svelte/internal"
-
   import MovieCard from "./MovieCard.svelte"
 
-  export let initialQuery
-
-  let query = initialQuery
+  let query
   let movies = []
 
   async function queryMovies(querySearch) {

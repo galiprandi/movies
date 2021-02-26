@@ -42,8 +42,7 @@ main > section {
 article {
   background-color: #fff;
   color: #252525;
-  margin: auto;
-  margin-bottom: 6em;
+  margin: 1em auto 5em auto;
   border-radius: 10px;
   overflow: hidden;
   width: 500px;
