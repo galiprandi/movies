@@ -52,7 +52,7 @@
 export default {
   name: "App",
   data: () => ({
-    query: "Matrix",
+    query: "",
     movies: [],
   }),
 
