@@ -4,7 +4,6 @@
   "scripts": {
     "build": "rollup -c; npm run update-readme-bundle-sizes",
     "dev": "rollup -c -w",
-    "start": "sirv public --host",
     "update-readme-bundle-sizes": "cd ..;sh ./update-readme-bundle-sizes.sh"
   },
   "devDependencies": {
