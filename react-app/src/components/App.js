@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react"
 import MovieCard from "./MovieCard"
-import "./App.css"
+// import "./App.css"
 
 export default function App() {
   const [query, setQuery] = useState("")
