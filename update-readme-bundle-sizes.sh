@@ -1,7 +1,11 @@
+# VANILLA
+VANILLA_FILE="./vanillajs/bundle.js"
+VANILLA_SIZE="$(du -ch $VANILLA_FILE | grep total | awk '{print $1}')"
+sed -i "s/.*Vanilla JS Bundle size:.*/- Vanilla JS Bundle size: $VANILLA_SIZE/g" ./README.md
+
 # SVELTE
 SVELTE_FILE="./svelte-app/public/*.js"
 SVELTE_SIZE="$(du -ch $SVELTE_FILE | grep total | awk '{print $1}')"
-
 sed -i "s/.*Svelte Bundle size:.*/- Svelte Bundle size: $SVELTE_SIZE/g" ./README.md
 
 # REACT

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>The Movies App</title>
+    <meta
+      name="description"
+      content="Movies App if is a little app with unique the object of analyze the difference between of type of bundles, your sizes and time compilation of each them, in most popular JS Frameworks."
+    />
+    <link rel="icon" type="image/png" href="favicon.ico" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://galiprandi.github.io/movies/assets/styles.css"
+    />
+    <link
+      rel="manifest"
+      href="https://galiprandi.github.io/movies/assets/manifest.json"
+    />
+    <script defer src="bundle.js"></script>
+  </head>
+  <body>
+    <main>
+      <form onsubmit="handleSubmit(event)">
+        <input
+          id="querySearch"
+          type="search"
+          name="querySearch"
+          placeholder="Search movies..."
+        />
+        <button type="submit">Search</button>
+      </form>
+      <section id="movies"></section>
+    </main>
+  </body>
+</html>

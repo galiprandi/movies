@@ -1,0 +1,15 @@
+{
+  "name": "vanillajs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "update-readme-bundle-sizes": "cd ..;sh ./update-readme-bundle-sizes.sh"
+  },
+  "keywords": [],
+  "author": "Germán Aliprandi",
+  "license": "MIT",
+  "dependencies": {
+    "esbuild": "^0.8.53"
+  }
+}
