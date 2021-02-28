@@ -4,18 +4,18 @@ Movies App if is a little app with unique the object of analyze the difference b
 
 ## Svelte version:
 
-> URL: [Try Online](https://galiprandi.github.io/movies/svelte-app/public/){:target="_blank"}
+> URL: [Try Online](https://galiprandi.github.io/movies/svelte-app/public/)
 
 - Svelte Bundle size: 8,0K
 
 ## React version:
 
-> URL: [Try Online](https://galiprandi.github.io/movies/react-app/build/){:target="_blank"}
+> URL: [Try Online](https://galiprandi.github.io/movies/react-app/build/)
 
 - React Bundle size: 144K
 
 ## Vue version:
 
-> URL: [Try Online](https://galiprandi.github.io/movies/vue/dist/){:target="_blank"}
+> URL: [Try Online](https://galiprandi.github.io/movies/vue/dist/)
 
 - Vue Bundle size: 100K
