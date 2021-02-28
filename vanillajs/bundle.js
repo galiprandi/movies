@@ -21,8 +21,10 @@ async function queryMovies(querySearch) {
 
 function renderMovies(movies, container = document.getElementById("movies")) {
   if (!container || !movies) return
-  container.innerHTML = ""
-  movies.map((movie) => container.appendChild(renderCard(movie)))
+  const movieList = document.createDocumentFragment()
+  movies.map((movie) => movieList.appendChild(renderCard(movie)))
+  container.textContent = "" // Empty movie list
+  container.appendChild(movieList) // Append movie list to DOM
 }
 
 function renderCard(movie) {
