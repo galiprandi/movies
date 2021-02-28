@@ -6,24 +6,24 @@ Movies App if is a little app with unique the object of analyze the difference b
 
 > URL: [Try Online](https://galiprandi.github.io/movies/vanillajs/)
 
-- Vanilla JS Bundle size: 4,0K
+- Vanilla JS Bundle size: 2,2K
 
 ## Svelte version:
 
 > URL: [Try Online](https://galiprandi.github.io/movies/svelte-app/public/)
 
-- Svelte Bundle size: 8,0K
+- Svelte Bundle size: 6,6K
 
 ## Vue version:
 
 > URL: [Try Online](https://galiprandi.github.io/movies/vue/dist/)
 
-- Vue Bundle size: 100K
+- Vue Bundle size: 95K
 
 ## React version:
 
 > URL: [Try Online](https://galiprandi.github.io/movies/react-app/build/)
 
-- React Bundle size: 144K
+- React Bundle size: 140K
 
 DISCLAIMER: The sizes of bundles can be different depending of partition type and filesystem used.
