@@ -9,7 +9,5 @@
   "keywords": [],
   "author": "Germán Aliprandi",
   "license": "MIT",
-  "dependencies": {
-    "esbuild": "^0.8.53"
-  }
+  "dependencies": {}
 }
