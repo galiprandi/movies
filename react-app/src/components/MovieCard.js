@@ -1,26 +1,18 @@
 import React from "react"
+import MovieDetails from "./MovieDetails"
+import MoviePoster from "./MoviePoster"
+import MovieTitleAndYear from "./MovieTitleAndYear"
 
-function MovieCard(props) {
-  const { title, poster_path: src, overview, release_date: date } = props.Movie
-
-  const srcImage = src
-    ? "https://image.tmdb.org/t/p/original/" + src
-    : "https://via.placeholder.com/500x750?text=POSTER%20UNAVAILABLE"
+function MovieCard({ Movie }) {
+  // const { title, poster_path: src, overview, release_date: date } = Movie
 
   return (
     <>
       <article>
-        <picture>
-          <img src={srcImage} alt={title} />
-        </picture>
+        <MoviePoster {...Movie} />
         <section className="summary">
-          <h1>
-            {title} ({new Date(date).getFullYear()})
-          </h1>
-          <details>
-            <summary>Summary</summary>
-            <p>{overview}</p>
-          </details>
+          <MovieTitleAndYear {...Movie} />
+          <MovieDetails {...Movie} />
         </section>
       </article>
     </>
