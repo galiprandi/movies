@@ -24,6 +24,6 @@ Movies App if is a little app with unique the object of analyze the difference b
 
 > URL: [Try Online](https://galiprandi.github.io/movies/react-app/build/)
 
-- React Bundle size: 140K
+- React Bundle size: 141K
 
 DISCLAIMER: The sizes of bundles can be different depending of partition type and filesystem used.
