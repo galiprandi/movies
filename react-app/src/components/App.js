@@ -27,7 +27,6 @@ export default function App() {
       .then((data) => {
         const results = data.results.sort(orderResultsNyYears) || []
         setMovies(results)
-        console.log(results)
       })
   }
 
@@ -46,7 +45,7 @@ export default function App() {
             placeholder="Search movies..."
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            onFocus={(e) => console.log(e.target.select())}
+            onFocus={(e) => e.target.select()}
             ref={querySearchInput}
           />
           <button type="submit">Search</button>
